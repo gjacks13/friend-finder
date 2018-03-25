@@ -1,0 +1,30 @@
+.question {
+  padding: 20px;
+}
+
+.radio-label {
+  padding-left: 10px;
+}
+
+.submit-btn {
+  margin-left: 15px;
+}
+
+.form-col {
+  margin: 0 auto;
+}
+
+.questionLbl {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+
+.questionText {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+#form-instructions {
+  font-weight: 100;
+}
