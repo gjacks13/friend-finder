@@ -16,8 +16,11 @@ const getFormData = () => {
 
 document.getElementById("questionaire").addEventListener("submit", function(e){
   e.preventDefault();
+  const currentPath = window.location;
+  const protocol = currentPath.protocol;
+  const host = currentPath.host;
 
-  const url = 'http://localhost:8080/api/friends';
+  const url = `${protocol}//${host}/api/friends`;
   let data = getFormData();
   // The parameters we are gonna pass to the fetch function
   let fetchData = { 
