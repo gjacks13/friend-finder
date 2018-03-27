@@ -1,6 +1,6 @@
 const modalController = {
   _changeWindowLocation() {
-    window.location = "http://localhost:8080/";
+    window.location = "/";
   },
 
   _clearModal() {
