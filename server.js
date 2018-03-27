@@ -1,10 +1,28 @@
+// Dependencies
+// =============================================================
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
-const exphbs = require("express-handlebars");
-const path = require("path");
-const parser = require("body-parser");
+const PORT = process.env.PORT || 8080;
 
-const port = process.env.PORT || 3000;
+// Sets up the Express app to handle data parsing
 
-app.engine("handlebars", exphbs({ defaultLayout : "main"}));
-app.set("view engine", "handlebars");
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
+app.use(bodyParser.json());
+
+// Static directory to be served
+app.use(express.static(__dirname + "/app/public"));
+
+// Routes
+// =============================================================
+require("./app/routes/api-routes.js")(app);
+require("./app/routes/html-routes.js")(app);
+
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});

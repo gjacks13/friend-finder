@@ -1,7 +1,7 @@
 const friendMatch = {
   calculateCompatabilityDifference(scoreSetA, scoreSetB) {
     if (scoreSetA.length !== scoreSetB.length) {
-      throw new Error("The socre sets are incompatible; the scores cannot be compared.");
+      throw new Error("The score sets are incompatible; the scores cannot be compared.");
     }
     let totalDifference = 0;
     for (let i = 0; i < scoreSetA.length; i++) {
@@ -12,4 +12,4 @@ const friendMatch = {
 
 };
 
-module.exports(friendMatch);
+module.exports = friendMatch;

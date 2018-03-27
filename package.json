@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "An application to help you find a compatible friend, by answering a series of questions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjacks13/friend-finder.git"
+  },
+  "author": "Garvey Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gjacks13/friend-finder/issues"
+  },
+  "homepage": "https://github.com/gjacks13/friend-finder#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
